@@ -5,9 +5,9 @@ using namespace std;
 void bubble_sort(int arr[], int n)
 {
 
-    for(int i=n-1; i>=1; i--)
+    for(int i=n-1; i>=1; i--)    //n-1 is entire array till i does not become less than 1
     {
-        for(int j=0; j<=i-1; j++)
+        for(int j=0; j<=i-1; j++)   //j<=i-1 --> n-1-1 = n-2 before the last index
         {
             if(arr[j]>arr[j+1])
             {
