@@ -1,49 +1,45 @@
 #include<bits/stdc++.h>
+#include<unordered_map>
 using namespace std;
+
 
 int main()
 {
-      int n;
-  cout<<"Enter the size of n:";
-  cin>>n;
-  int arr[n];
-  cout<<"Enter the array elements:";
+    // unordered_map<string,int>umap;
+    // umap["aa"]=2;
+    // umap["bb"]=3;
+    // umap["cc"]=4;
 
-  for(int i=0; i<n; i++)
-  {
-    cin>>arr[i];
-  } 
+    // for(auto x:umap) cout<<x.first<<" "<<x.second<<endl;
 
-  //pre-computation
-  unordered_map<int, int>mpp;
-  for(int i=0; i<n; i++)
-  {
-    mpp[arr[i]]++;
-  }
+    
 
-  for(auto i:mpp)
-  {
+    // string key = "aa";
+    // if(umap.find(key) == umap.end()){
+    //     cout<<"not found"<<endl;
+    // }
+    // else{
+    //     auto temp = umap.find(key);
+    //     cout<<"key is "<<temp->first<<endl;
+    //     cout<<"value is "<<temp->second<<endl;
+    // }
 
-    cout<<i.first<<endl;
-  }
+    // umap.insert(make_pair("mobile", 17000));
 
+    // for(auto itr = umap.begin(); itr!=umap.end(); itr++)
+    // cout<<itr->first<<" "<<itr->second<<endl;
 
-//query
-  int q;
-  cout<<"Enter the size of q:";
-  cin>>q;
- while(q--)
-  {
+    int arr[] = {1, 3,2,3,5,7,7,3,4,0,3,5,6,3};
+    unordered_map<int, int>umapped;
 
-    int number;
-    cout<<"Enter the number u want to do a query about";
+    for(int i=0;i<15; i++)
+    {
+        int key = arr[i];
+        umapped[key]++;
 
-    cin>>number;
+    }
 
-    // fetching
+    for(auto itr=umapped.begin(); itr!=umapped.end();itr++)
+    cout<<itr->first<<" "<<itr->second<<endl; 
 
-    cout<<mpp[number]<<endl;
-  }
-
-    return 0;
-}
+} 
